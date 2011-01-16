@@ -1,6 +1,12 @@
 @font-face {
-  font-family: City-Blueprint;
-  src: url(fonts/CityBlueprint.ttf) format("truetype");
+	font-family: 'BonvenoCFLight';
+	src: url('BonvenoCF-Light-webfont.eot');
+	src: local('☺'), url('fonts/BonvenoCF-Light-webfont.woff') format('woff'), url('fonts/BonvenoCF-Light-webfont.ttf') format('truetype'), url('fonts/BonvenoCF-Light-webfont.svg#webfontlHdEWql0') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
-.blueprint { font-family: "City-Blueprint"; }
+h1 {
+  font-family: 'BonvenoCFLight';
+}
+

@@ -1,0 +1,6 @@
+@font-face {
+  font-family: City-Blueprint;
+  src: url(fonts/CityBlueprint.ttf) format("truetype");
+}
+
+.blueprint { font-family: "City-Blueprint"; }

@@ -12,16 +12,25 @@ function $(id) {
   return document.getElementById(id);
 }
 
+var sections = ['save-the-date', 'faq', 'guestbook'];
+
+var guestbookInitialized = false;
 function updateDisplay() {
   section = window.location.search.replace('?', '');
 
-  // Sanitize our input.  It might make sense to use the sections variable to
-  // do this, but I hear IE doesn't support Array.indexOf().
-  if (section != 'faq' && section != 'registry' && section != 'guestbook') {
+  // Sanitize our input.
+  var found = false;
+  for (var i = 0; i < sections.length; i++) {
+    if (sections[i] == section) {
+      found = true;
+      break;
+    }
+  }
+
+  if (!found) {
     section = 'save-the-date';
   }
 
-  var sections = ['save-the-date', 'faq', 'registry', 'guestbook'];
   for (var i = 0; i < sections.length; i++) {
     var name = sections[i];
 
@@ -36,6 +45,22 @@ function updateDisplay() {
       $(name + '-span').style.display = 'none';
     }
   }
+
+  // Set up the guestbook here.  We could put this code inside index.html, but
+  // putting it here makes the page load faster.
+  if (name == 'guestbook' && !guestbookInitialized) {
+    guestbookInitialized = true;
+
+    var disqus_shortname = 'jcwedding';
+    var disqus_identifier = 'DD8BE082-E3A0-09BA-DE24618AE45FE30B';
+    var disqus_url = 'http://jlebar.com/wedding';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  }
 }
 
 addListener('load', window, function() {
@@ -46,10 +71,9 @@ addListener('load', window, function() {
       }
     }
 
-    setLink('save-the-date');
-    setLink('faq');
-    setLink('registry');
-    setLink('guestbook');
+    for (var i = 0; i < sections.length; i++) {
+      setLink(sections[i]);
+    }
   }
 
   updateDisplay();

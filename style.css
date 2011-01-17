@@ -17,9 +17,62 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 60pt;
+  letter-spacing: -.12em;
+  margin-bottom: .75em;
+}
+
+h2 {
+  font-size: 40pt;
+  letter-spacing: -.15em;
+}
+
+h3 {
+  font-size: 30pt;
+  letter-spacing: -.12em;
+}
+
+h4 {
+  font-size: 20pt;
+  letter-spacing: -.1em;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+div#content {
+  margin: 2em 4em 0 2em;
+  max-width: 75em;
+  min-height: 850px; /* So the image fits. */
+  background-image: url('images/bouquet-blue-sm.jpg');
+  background-repeat: no-repeat;
+  text-align: right;
+}
+
+div#content2 {
+  min-height: 850px;
+  max-width: 40em;
+  padding-left: 5em;
+  float: right;
+  background:
+    -webkit-gradient(linear, left top, right top,
+                     color-stop(0%, rgba(255,255,255,.1)),
+                     color-stop(20%, rgba(255,255,255,.7)));
+  background:
+    -moz-linear-gradient(left,
+                         rgba(255,255,255,.1) 0%,
+                         rgba(255,255,255,.7) 20%);
 }
 
 img#bouquet {
+  display:none;
   float: left;
   width: 500px;
+  padding-right: 1em;
+}
+
+div#date-location {
+  margin-top: 3em;
+  margin-bottom: 3em;
 }

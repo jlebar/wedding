@@ -84,7 +84,7 @@ div#date-location {
   margin-bottom: 3em;
 }
 
-div#faq {
+div#faq, div#registry, div#guestbook {
   display:none;
 }
 

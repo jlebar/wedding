@@ -47,7 +47,7 @@ function updateDisplay() {
   }
 
   // Set up the guestbook here.  We could put this code inside index.html, but
-  // putting it here makes the page load faster.
+  // putting it here makes the page load faster initially.
   if (name == 'guestbook' && !guestbookInitialized) {
     guestbookInitialized = true;
 

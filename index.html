@@ -2,6 +2,10 @@
 <html>
 
 <head>
+  <!-- No idea why, but IE8 standards mode cuts off the right side of some
+   text.  IE8 in IE7 mode seems to work, so I guess we'll go with that. -->
+  <meta http-equiv="x-ua-compatible" content="IE=7">
+
   <link rel='stylesheet' href='style.css' />
   <title>Justin and Caroline's Wedding</title>
   <script src='nav.js'></script>
@@ -10,6 +14,7 @@
 <body>
 
 <div id='content'>
+<div id='content1'>
 <div id='content2'>
 
 <div id='save-the-date-above'>
@@ -34,16 +39,16 @@
 
 <ul id='menu'>
 <li>
-  <a id='save-the-date-link' href='?save-the-date'>Save the date</a>
-  <span id='save-the-date-span'>Save the date</span>
+  <!-- Don't put a space between the link and the span!  It appears that IE8
+   doesn't coalesce [space]<display:none element>[space] into a single
+   space.  Fantastic. -->
+  <a id='save-the-date-link' href='?save-the-date'>Save the date</a><span id='save-the-date-span'>Save the date</span>
 </li>
 <li>
-  <a id='faq-link' href='?faq'>FAQ</a>
-  <span id='faq-span'>FAQ</span>
+  <a id='faq-link' href='?faq'>FAQ</a><span id='faq-span'>FAQ</span>
 </li>
 <li>
-  <a id='guestbook-link' href='?guestbook'>Guestbook</a>
-  <span id='guestbook-span'>Guestbook</span>
+  <a id='guestbook-link' href='?guestbook'>Guestbook</a><span id='guestbook-span'>Guestbook</span>
 </li>
 </ul>
 
@@ -64,6 +69,7 @@
 </div>
 
 </div> <!--content2-->
+</div> <!--content1-->
 </div> <!--content-->
 
 </body>

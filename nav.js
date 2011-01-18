@@ -8,8 +8,11 @@ function addListener(evnt, elem, func) {
   return r;
 }
 
-function $(id) {
-  return document.getElementById(id);
+function $(id, suffix) {
+  if (!suffix)
+    return document.getElementById(id);
+  else
+    return document.getElementById(id + '-' + suffix);
 }
 
 var sections = ['save-the-date', 'faq', 'guestbook'];
@@ -34,15 +37,23 @@ function updateDisplay() {
   for (var i = 0; i < sections.length; i++) {
     var name = sections[i];
 
+    function setDisplay(suffix, disp) {
+      if ($(name, suffix)) {
+        $(name, suffix).style.display = disp;
+      }
+    }
+
     if (section == name) {
-      $(name).style.display = 'block';
-      $(name + '-link').style.display = 'none';
-      $(name + '-span').style.display = 'inline';
+      setDisplay('above', 'block');
+      setDisplay('below', 'block');
+      setDisplay('link', 'none');
+      setDisplay('span', 'inline');
     }
     else {
-      $(name).style.display = 'none';
-      $(name + '-link').style.display = 'inline';
-      $(name + '-span').style.display = 'none';
+      setDisplay('above', 'none');
+      setDisplay('below', 'none');
+      setDisplay('link', 'inline');
+      setDisplay('span', 'none');
     }
   }
 
@@ -66,7 +77,7 @@ function updateDisplay() {
 addListener('load', window, function() {
   if (history.pushState) {
     function setLink(name) {
-      $(name + '-link').onclick = function() {
+      $(name, 'link').onclick = function() {
         return navigate(name);
       }
     }

@@ -89,17 +89,11 @@ div.body-text {
   text-align: left;
 }
 
-div#date-location {
-  margin-top: 3em;
-  margin-bottom: 3em;
-}
-
 div#faq, div#guestbook {
   display:none;
 }
 
 ul#menu {
-  margin-top: 2em;
   margin-bottom: 2em;
   font-size: 16pt;
 }
@@ -112,4 +106,18 @@ ul#menu li {
 
 ul#menu span {
   display: none;
+}
+
+div#date-location {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+dl dt {
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+dl dd {
+  margin-top: .2em;
 }

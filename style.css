@@ -129,6 +129,10 @@ dl dt {
   margin-top: 1em;
 }
 
+dl dl {
+  margin-left: 1em;
+}
+
 dl dl dt {
   font-weight: normal;
   font-style: italic;

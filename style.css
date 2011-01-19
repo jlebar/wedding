@@ -128,3 +128,9 @@ dl dt {
   font-weight: bold;
   margin-top: 1em;
 }
+
+dl dl dt {
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: .3em;
+}

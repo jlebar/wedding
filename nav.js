@@ -15,6 +15,12 @@ function $(id, suffix) {
     return document.getElementById(id + '-' + suffix);
 }
 
+String.prototype.rot13 = function(){
+    return this.replace(/[a-zA-Z]/g, function(c){
+        return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+    });
+};
+
 var sections = ['save-the-date', 'faq', 'guestbook'];
 
 var guestbookInitialized = false;
@@ -76,6 +82,7 @@ function updateDisplay() {
 
 addListener('load', window, function() {
   if (history.pushState) {
+
     function setLink(name) {
       $(name, 'link').onclick = function() {
         return navigate(name);
@@ -85,7 +92,24 @@ addListener('load', window, function() {
     for (var i = 0; i < sections.length; i++) {
       setLink(sections[i]);
     }
+
+    // ugh.
+    $('guestbook-link-2').onclick = function() {
+      return navigate('guestbook');
+    }
+
   }
+
+  function setMailto(name, addr) {
+    email = addr.rot13() + '@tznvy.pbz'.rot13();
+    $(name, 'mailto').innerHTML = email;
+    $(name, 'mailto').href = 'mailto:' + email;
+  }
+
+  setMailto('justin', 'whfgva.yrone');
+  setMailto('caroline', 'pnebyvar.fpurezre');
+  setMailto('kathy', 'obo.xngul.fpurezre');
+  setMailto('josie', 'wyrone');
 
   updateDisplay();
 });

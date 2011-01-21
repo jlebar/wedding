@@ -44,9 +44,27 @@ function updateDisplay() {
     var name = sections[i];
 
     function setDisplay(suffix, disp) {
-      if ($(name, suffix)) {
-        $(name, suffix).style.display = disp;
+      if (!$(name, suffix))
+        return;
+
+      // We can't make the guestbook display:none, because then when we unhide
+      // it, the comment box grows a line for every character typed in WebKit.
+      // So we move it offscreen.  (Our CSS sets the guestbook's top and left
+      // to -1000px.)
+      //
+      // This is nuts, by the way.
+      if (name == 'guestbook' && suffix == 'below') {
+        if (disp == 'block') {
+          $('guestbook-below').style.position = 'static';
+        }
+        else {
+          $('guestbook-below').style.position = 'absolute';
+        }
+
+        return;
       }
+
+      $(name, suffix).style.display = disp;
     }
 
     if (section == name) {
@@ -62,25 +80,25 @@ function updateDisplay() {
       setDisplay('span', 'none');
     }
   }
-
-  // Set up the guestbook here.  We could put this code inside index.html, but
-  // putting it here makes the page load faster initially.
-  if (name == 'guestbook' && !guestbookInitialized) {
-    guestbookInitialized = true;
-
-    var disqus_shortname = 'jcwedding';
-    var disqus_identifier = 'DD8BE082-E3A0-09BA-DE24618AE45FE30B';
-    var disqus_url = 'http://jlebar.com/wedding';
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  }
 }
 
-addListener('load', window, function() {
+// This mess is to call the init() function on DOMContentLoaded.  We need to do
+// this so we have a chance to run before disqus does its onload business;
+// otherwise, we'll see a flash of content as the page loads.
+//
+// Did I mention that this disqus thing is a serious pain?
+//
+// http://www.kryogenix.org/days/2007/09/26/shortloaded
+
+(function(i) {var u =navigator.userAgent;var e=/*@cc_on!@*/false; var st = 
+setTimeout;if(/webkit/i.test(u)){st(function(){var dr=document.readyState;
+if(dr=="loaded"||dr=="complete"){i()}else{st(arguments.callee,10);}},10);}
+else if((/mozilla/i.test(u)&&!/(compati)/.test(u)) || (/opera/i.test(u))){
+document.addEventListener("DOMContentLoaded",i,false); } else if(e){     (
+function(){var t=document.createElement('doc:rdy');try{t.doScroll('left');
+i();t=null;}catch(e){st(arguments.callee,0);}})();}else{window.onload=i;}})(init);
+
+function init() {
   if (history.pushState) {
 
     function setLink(name) {
@@ -112,7 +130,7 @@ addListener('load', window, function() {
   setMailto('josie', 'wyrone');
 
   updateDisplay();
-});
+}
 
 addListener('popstate', window, function(e) {
   updateDisplay();

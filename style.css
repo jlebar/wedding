@@ -149,7 +149,23 @@ dl dl {
 dl dl dt {
   font-weight: normal;
   font-style: italic;
-  font-size: 100%;
   margin-top: .5em;
   margin-bottom: .3em;
+}
+
+div#guestbook-below {
+  /* Seriously, this is awful.  See nav.js. */
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+}
+
+#dsq-content {
+  font-size: 13pt !important;
+}
+
+/* The important 13-point font size for dsq-content overrides h3's font-size.
+ * How nice.  */
+#dsq-content h3 {
+  font-size: 22pt !important;
 }

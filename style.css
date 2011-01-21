@@ -153,6 +153,10 @@ dl dl dt {
   margin-bottom: .3em;
 }
 
+dl dl dd {
+  font-size: 13pt;
+}
+
 div#guestbook-below {
   /* Seriously, this is awful.  See nav.js. */
   position: absolute;

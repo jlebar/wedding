@@ -82,21 +82,10 @@ function updateDisplay() {
   }
 }
 
-// This mess is to call the init() function on DOMContentLoaded.  We need to do
-// this so we have a chance to run before disqus does its onload business;
-// otherwise, we'll see a flash of content as the page loads.
-//
-// Did I mention that this disqus thing is a serious pain?
-//
-// http://www.kryogenix.org/days/2007/09/26/shortloaded
-
-(function(i) {var u =navigator.userAgent;var e=/*@cc_on!@*/false; var st = 
-setTimeout;if(/webkit/i.test(u)){st(function(){var dr=document.readyState;
-if(dr=="loaded"||dr=="complete"){i()}else{st(arguments.callee,10);}},10);}
-else if((/mozilla/i.test(u)&&!/(compati)/.test(u)) || (/opera/i.test(u))){
-document.addEventListener("DOMContentLoaded",i,false); } else if(e){     (
-function(){var t=document.createElement('doc:rdy');try{t.doScroll('left');
-i();t=null;}catch(e){st(arguments.callee,0);}})();}else{window.onload=i;}})(init);
+// We'll call init() from within a <script> at the bottom of the page.
+// The right thing to do would be to call this on DOMContentLoaded.  But the
+// hacks I've found [1] for doing this on IE apparently don't run the script
+// early enough.
 
 function init() {
   if (history.pushState) {

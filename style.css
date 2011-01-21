@@ -98,7 +98,6 @@ div#content2 {
 
 .body-text {
   text-align: left;
-  font-family: 'Verdana';
   font-size: 13pt;
 }
 
@@ -131,26 +130,26 @@ div#date-location {
 }
 
 dl p {
-  margin-top: .5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 dl dt {
   font-weight: bold;
   font-size: 18pt;
-  font-family: 'BonvenoCFLight';
   margin-top: 2em;
+  margin-bottom: -.25em;
 }
 
 dl dl {
   margin-left: 2em;
-  margin-top: .5em;
+  margin-top: 1em;
 }
 
 dl dl dt {
   font-weight: normal;
-  font-family: 'Verdana';
   font-style: italic;
   font-size: 100%;
-  margin-bottom: .3em;
   margin-top: .5em;
+  margin-bottom: .3em;
 }

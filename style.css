@@ -162,6 +162,7 @@ div#guestbook-below {
   position: absolute;
   top: -4000px;
   left: -4000px;
+  max-width: 1000px;
 }
 
 #dsq-content {

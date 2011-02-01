@@ -160,8 +160,8 @@ dl dl dd {
 div#guestbook-below {
   /* Seriously, this is awful.  See nav.js. */
   position: absolute;
-  top: -1000px;
-  left: -1000px;
+  top: -4000px;
+  left: -4000px;
 }
 
 #dsq-content {

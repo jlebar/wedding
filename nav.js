@@ -50,7 +50,7 @@ function updateDisplay() {
       // We can't make the guestbook display:none, because then when we unhide
       // it, the comment box grows a line for every character typed in WebKit.
       // So we move it offscreen.  (Our CSS sets the guestbook's top and left
-      // to -1000px.)
+      // to -4000px.)
       //
       // This is nuts, by the way.
       if (name == 'guestbook' && suffix == 'below') {

@@ -173,4 +173,9 @@ div#guestbook-below {
  * How nice.  */
 #dsq-content h3 {
   font-size: 22pt !important;
+  font-family: 'BonvenoCFLight';
+}
+
+#dsq-content {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
 }

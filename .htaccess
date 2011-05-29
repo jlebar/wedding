@@ -1,1 +1,1 @@
-Header set Cache-Control "must-revalidate"
+Header set Cache-Control "no-cache"

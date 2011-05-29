@@ -21,7 +21,7 @@ String.prototype.rot13 = function(){
     });
 };
 
-var sections = ['save-the-date', 'faq', 'guestbook'];
+var sections = ['wedding', 'details', 'registry', 'guestbook'];
 
 var guestbookInitialized = false;
 function updateDisplay() {
@@ -37,7 +37,7 @@ function updateDisplay() {
   }
 
   if (!found) {
-    section = 'save-the-date';
+    section = sections[0];
   }
 
   for (var i = 0; i < sections.length; i++) {

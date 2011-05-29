@@ -16,7 +16,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 60pt;
+  font-size: 50pt;
   letter-spacing: -.12em;
   margin-bottom: .50em;
 }
@@ -155,6 +155,10 @@ dl dl dt {
 
 dl dl dd {
   font-size: 13pt;
+}
+
+address {
+  margin-left: 1em;
 }
 
 div#guestbook-below {

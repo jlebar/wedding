@@ -161,6 +161,25 @@ address {
   margin-left: 1em;
 }
 
+form td {
+  padding-bottom: .5em;
+}
+
+form td.form-label {
+  padding-right: .75em;
+  text-align: right;
+  vertical-align: middle;
+}
+
+input.form-submit-button {
+  margin-top: .75em;
+}
+
+form input, form select {
+  font-family: 'BonvenoCFLight';
+  font-size: 13pt;
+}
+
 div#guestbook-below {
   /* Seriously, this is awful.  See nav.js. */
   position: absolute;

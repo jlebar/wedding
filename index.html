@@ -40,6 +40,10 @@
   <h2>Registry</h2>
 </div>
 
+<div id='rsvp-above'>
+  <h2>RSVP</h2>
+</div>
+
 <ul id='menu'>
 <li>
   <!-- Don't put a space between the link and the span!  It appears that IE8
@@ -51,8 +55,11 @@
   <a id='details-link' href='?details'>Details</a><span class='menu-selected' id='details-span'>Details</span>
 </li>
 <li>
-  <a id='registry-link' href='?registry'>Registry</a><span class='registry-selected' id='registry-span'>Registry</span>
+  <a id='registry-link' href='?registry'>Registry</a><span class='menu-selected' id='registry-span'>Registry</span>
 </li>
+<!--<li>
+  <a id='rsvp-link' href='?rsvp'>RSVP</a><span class='menu-selected' id='rsvp-span'>RSVP</span>
+</li>-->
 <li>
   <a id='guestbook-link' href='?guestbook'>Guestbook</a><span class='menu-selected' id='guestbook-span'>Guestbook</span>
 </li>
@@ -157,6 +164,52 @@ Borders</a>, so that others might enjoy the gift of a healthy life.</p>
 
 <p>(If you're unfamiliar with Doctors Without Borders, more information is
 available <a target='_blank' href='https://www.doctorswithoutborders.org/aboutus/'>here</a>.)</p>
+
+</div>
+
+<div id='rsvp-below' class='body-text'>
+
+  <form action="https://spreadsheets.google.com/spreadsheet/formResponse?formkey=dDNsczFjY3B3MGI2MEpnZVFJanZhYkE6MQ&amp;theme=0AX42CRMsmRFbUy03NTAzM2Q4My03ODU1LTQ2NzItODI2YS1kZmU5YzdiMzZjOGQ&amp;ifq" method="POST" target='_blank'>
+
+    <table>
+      <tr>
+        <td class='form-label'><label for='entry_1'>Name</label></td>
+        <td><input type="text" name="entry.1.single" value="" class="ss-q-short" id="entry_1"></td>
+      </tr>
+      <tr>
+        <td class='form-label'><label for='entry_0'>Attending?</label></td>
+        <td>
+          <label><input type="radio" name="entry.0.group" value="Yes" id="group_0_1">Yes</label>
+          <label><input type="radio" name="entry.0.group" value="No" id="group_0_2">No</label>
+        </td>
+      </tr>
+      <tr>
+        <td class='form-label'><label for="entry_6">Additional family members</label></td>
+        <td><select name="entry.6.single" id="entry_6">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td class='form-label'><label for="entry_2">Additional guest, if applicable</label></td>
+        <td><input type="text" name="entry.2.single" value="" class="ss-q-short" id="entry_2"></td>
+      </tr>
+      <tr>
+        <td class='form-label'>&nbsp;</td>
+        <td>
+          <input type="submit" name="submit" value="Submit" class='form-submit-button'>
+        </td>
+      </tr>
+    </table>
+
+    <input type="hidden" name="pageNumber" value="0">
+    <input type="hidden" name="backupCache" value="">
+  
+  </form>
 
 </div>
 

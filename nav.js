@@ -21,7 +21,7 @@ String.prototype.rot13 = function(){
     });
 };
 
-var sections = ['wedding', 'details', 'registry', 'guestbook'];
+var sections = ['wedding', 'details', 'registry', 'rsvp', 'guestbook'];
 
 var guestbookInitialized = false;
 function updateDisplay() {

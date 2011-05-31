@@ -91,8 +91,10 @@ function init() {
   if (history.pushState) {
 
     function setLink(name) {
-      $(name, 'link').onclick = function() {
-        return navigate(name);
+      if ($(name, 'link')) {
+        $(name, 'link').onclick = function() {
+          return navigate(name);
+        }
       }
     }
 

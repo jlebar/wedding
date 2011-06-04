@@ -169,7 +169,12 @@ available <a target='_blank' href='https://www.doctorswithoutborders.org/aboutus
 
 <div id='rsvp-below' class='body-text'>
 
-  <form action="https://spreadsheets.google.com/spreadsheet/formResponse?formkey=dDNsczFjY3B3MGI2MEpnZVFJanZhYkE6MQ&amp;theme=0AX42CRMsmRFbUy03NTAzM2Q4My03ODU1LTQ2NzItODI2YS1kZmU5YzdiMzZjOGQ&amp;ifq" method="POST" target='_blank'>
+  <div id='rsvp-header'>
+    We look forward to celebrating with you!
+    <div id='rsvp-header2'>Please reply by July 25th, 2011.</div>
+  </div>
+
+  <form id='rsvp-form' action="https://spreadsheets.google.com/spreadsheet/formResponse?formkey=dDNsczFjY3B3MGI2MEpnZVFJanZhYkE6MQ&amp;theme=0AX42CRMsmRFbUy03NTAzM2Q4My03ODU1LTQ2NzItODI2YS1kZmU5YzdiMzZjOGQ&amp;ifq" method="POST" target='_blank'>
 
     <table>
       <tr>
@@ -177,12 +182,20 @@ available <a target='_blank' href='https://www.doctorswithoutborders.org/aboutus
         <td><input type="text" name="entry.1.single" value="" class="ss-q-short" id="entry_1"></td>
       </tr>
       <tr>
-        <td class='form-label'><label for='entry_0'>Attending?</label></td>
+        <td class='form-label'>
+          <label for='group_0_1'>Accepts</label>
+        </td>
         <td>
-          <label><input type="radio" name="entry.0.group" value="Yes" id="group_0_1">Yes</label>
-          <label><input type="radio" name="entry.0.group" value="No" id="group_0_2">No</label>
+           <input type="radio" name="entry.0.group" value="Yes" id="group_0_1">
         </td>
       </tr>
+      <tr>
+        <td class='form-label'>
+          <label for='group_0_2'>Regrets</label>
+        </td>
+        <td>
+          <input type="radio" name="entry.0.group" value="No" id="group_0_2">
+        </td>
       <tr>
         <td class='form-label'><label for="entry_6">Additional family members</label></td>
         <td><select name="entry.6.single" id="entry_6">

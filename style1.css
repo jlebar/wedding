@@ -175,9 +175,23 @@ input.form-submit-button {
   margin-top: .75em;
 }
 
+#rsvp-form table {
+  float: right;
+}
+
 form input, form select {
   font-family: 'BonvenoCFLight';
   font-size: 13pt;
+}
+
+#rsvp-header {
+  text-align: right;
+  margin-bottom: 1.5em;
+}
+
+#rsvp-header2 {
+  color: #666;
+  font-size: .85em;
 }
 
 div#guestbook-below {

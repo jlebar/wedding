@@ -179,7 +179,7 @@ input.form-submit-button {
   float: right;
 }
 
-form input, form select {
+form input, form select, form textarea {
   font-family: 'BonvenoCFLight';
   font-size: 13pt;
 }

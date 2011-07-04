@@ -174,42 +174,36 @@ available <a target='_blank' href='https://www.doctorswithoutborders.org/aboutus
     <div id='rsvp-header2'>Please reply by July 25th, 2011.</div>
   </div>
 
-  <form id='rsvp-form' action="https://spreadsheets.google.com/spreadsheet/formResponse?formkey=dDNsczFjY3B3MGI2MEpnZVFJanZhYkE6MQ&amp;theme=0AX42CRMsmRFbUy03NTAzM2Q4My03ODU1LTQ2NzItODI2YS1kZmU5YzdiMzZjOGQ&amp;ifq" method="POST" target='_blank'>
+
+  <form id='rsvp-form' action="https://spreadsheets.google.com/spreadsheet/formResponse?formkey=dHN0TGdXdmVLZFBHX3hGVU9vNmMtUXc6MQ&amp;embedded=true&amp;ifq" method="POST" id="ss-form" target='_blank'>
 
     <table>
       <tr>
-        <td class='form-label'><label for='entry_1'>Name</label></td>
-        <td><input type="text" name="entry.1.single" value="" class="ss-q-short" id="entry_1"></td>
+        <td class='form-label'><label for='entry_0'>Name(s)</label></td>
+        <td><input type="text" name="entry.0.single" value="" id="entry_0" size='30'></td>
       </tr>
       <tr>
         <td class='form-label'>
-          <label for='group_0_1'>Accepts</label>
+          <label for='group_2_1'>Accepts</label>
         </td>
         <td>
-           <input type="radio" name="entry.0.group" value="Yes" id="group_0_1">
+           <input type="radio" name="entry.2.group" value="Yes" id="group_2_1">
         </td>
       </tr>
       <tr>
         <td class='form-label'>
-          <label for='group_0_2'>Regrets</label>
+          <label for='group_2_2'>Regrets</label>
         </td>
         <td>
-          <input type="radio" name="entry.0.group" value="No" id="group_0_2">
+          <input type="radio" name="entry.2.group" value="No" id="group_2_2">
         </td>
       <tr>
-        <td class='form-label'><label for="entry_6">Additional family members</label></td>
-        <td><select name="entry.6.single" id="entry_6">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select></td>
-      </tr>
-      <tr>
-        <td class='form-label'><label for="entry_2">Additional guest, if applicable</label></td>
-        <td><input type="text" name="entry.2.single" value="" class="ss-q-short" id="entry_2"></td>
+        <td class='form-label'>
+          <label for='entry_3'>Notes</label>
+        </td>
+        <td>
+          <textarea name="entry.3.single" rows="3" cols="29" class="ss-q-long" id="entry_3"></textarea>
+        </td>
       </tr>
       <tr>
         <td class='form-label'>&nbsp;</td>

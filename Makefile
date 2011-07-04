@@ -1,7 +1,9 @@
-all: stage publish
+REMOTEHOST=jlebar_jlebar-blog@ssh.phx.nearlyfreespeech.net
+RSYNC_FLAGS=-a
+FILES=.htaccess index.html style*.css nav.js images fonts 
 
 stage:
-	rsync -a . /home/jlebar/afs-home/WWW/wedding
+	rsync $(RSYNC_FLAGS) $(FILES) $(REMOTEHOST):wedding/staging
 
 publish:
-	rsync -a .htaccess index.html style*.css nav.js images fonts jlebar_jlebar-blog@ssh.phx.nearlyfreespeech.net:wedding
+	rsync $(RSYNC_FLAGS) $(FILES) $(REMOTEHOST):wedding

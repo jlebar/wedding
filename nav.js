@@ -8,7 +8,7 @@ function addListener(evnt, elem, func) {
   return r;
 }
 
-function $(id, suffix) {
+function $$(id, suffix) {
   if (!suffix)
     return document.getElementById(id);
   else
@@ -44,7 +44,7 @@ function updateDisplay() {
     var name = sections[i];
 
     function setDisplay(suffix, disp) {
-      if (!$(name, suffix))
+      if (!$$(name, suffix))
         return;
 
       // We can't make the guestbook display:none, because then when we unhide
@@ -55,16 +55,16 @@ function updateDisplay() {
       // This is nuts, by the way.
       if (name == 'guestbook' && suffix == 'below') {
         if (disp == 'block') {
-          $('guestbook-below').style.position = 'static';
+          $$('guestbook-below').style.position = 'static';
         }
         else {
-          $('guestbook-below').style.position = 'absolute';
+          $$('guestbook-below').style.position = 'absolute';
         }
 
         return;
       }
 
-      $(name, suffix).style.display = disp;
+      $$(name, suffix).style.display = disp;
     }
 
     if (section == name) {
@@ -91,8 +91,8 @@ function init() {
   if (history.pushState) {
 
     function setLink(name) {
-      if ($(name, 'link')) {
-        $(name, 'link').onclick = function() {
+      if ($$(name, 'link')) {
+        $$(name, 'link').onclick = function() {
           return navigate(name);
         }
       }
@@ -101,26 +101,10 @@ function init() {
     for (var i = 0; i < sections.length; i++) {
       setLink(sections[i]);
     }
-
-    // ugh.
-    $('guestbook-link-2').onclick = function() {
-      return navigate('guestbook');
-    }
-
   }
-
-  function setMailto(name, addr) {
-    email = addr.rot13() + '@tznvy.pbz'.rot13();
-    $(name, 'mailto').innerHTML = email;
-    $(name, 'mailto').href = 'mailto:' + email;
-  }
-
-  setMailto('justin', 'whfgva.yrone');
-  setMailto('caroline', 'pnebyvar.fpurezre');
-  setMailto('kathy', 'obo.xngul.fpurezre');
-  setMailto('josie', 'wyrone');
 
   updateDisplay();
+  $('video,audio').mediaelementplayer();
 }
 
 addListener('popstate', window, function(e) {

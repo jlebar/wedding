@@ -8,7 +8,12 @@
 
   <link rel='stylesheet' href='style1.css' />
   <title>Justin and Caroline's Wedding</title>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
+  <script src='mediaelement/mediaelement-and-player.min.js'></script>
   <script src='nav.js'></script>
+
+  <link rel='stylesheet' href='mediaelement/mediaelementplayer-new.css' />
 </head>
 
 <body>
@@ -29,7 +34,7 @@
 </div>
 
 <div id='details-above'>
-  <h2>Wedding Details</h2>
+  <h2>After the wedding</h2>
 </div>
 
 <div id='guestbook-above'>
@@ -40,10 +45,6 @@
   <h2>Registry</h2>
 </div>
 
-<div id='rsvp-above'>
-  <h2>RSVP</h2>
-</div>
-
 <ul id='menu'>
 <li>
   <!-- Don't put a space between the link and the span!  It appears that IE8
@@ -52,88 +53,46 @@
   <a id='wedding-link' href='?wedding'>Wedding</a><span class='menu-selected' id='wedding-span'>Wedding</span>
 </li>
 <li>
-  <a id='details-link' href='?details'>Details</a><span class='menu-selected' id='details-span'>Details</span>
+  <a id='details-link' href='?details'><em>Post facto</em></a><span class='menu-selected' id='details-span'><em>Post facto</em></span>
 </li>
 <li>
   <a id='registry-link' href='?registry'>Registry</a><span class='menu-selected' id='registry-span'>Registry</span>
-</li>
-<li>
-  <a id='rsvp-link' href='?rsvp'>RSVP</a><span class='menu-selected' id='rsvp-span'>RSVP</span>
 </li>
 <li>
   <a id='guestbook-link' href='?guestbook'>Guestbook</a><span class='menu-selected' id='guestbook-span'>Guestbook</span>
 </li>
 </ul>
 
-<div id='details-below'>
-  <dl class='body-text'>
+<div id='details-below' class='body-text'>
+<p>Thank you to everyone who was able to come to our wedding!  We had a fantastic day, and we were so happy to share it with our friends and family.</p>
 
-    <dt>Who, what, when, where?</dt>
-    <dd><p>Justin and Caroline are excited to announce their engagement!  We
-    will be getting married on August 13, 2011.  Our ceremony will be at 1:00pm
-    in the <a target='_blank' href='http://goo.gl/wYDIm'>Keating Marine Education Center</a>
-    at <a target='_blank' href='http://mote.org'>Mote Marine Laboratory and Aquarium</a>
-    in Sarasota, FL.</p>
+<h4>Photos</h4>
 
-    <p>(In case you're curious: There are no fish in the Keating Center, but
-    the aquarium proper is just across the street.)</p>
+<p>The first batch of the photos our photographer took are available on <a target='_blank' href='http://elevenweddings.com/blog/2011/08/caroline-justins-wedding-keating-center-sarasota-fl'>his blog</a>.  You're welcome to print any of these photos; download the full-resolution files <a>here</a>.</p>
 
-    <p>We hope you will join us!</p></dd>
+<p>(We usually print photos at <a target='_blank' href='http://snapfish.com'>Snapfish</a>, but you can also bring the files to your local drugstore.  Just extract the zip file and copy the images to a flash drive or blank CD.)</p>
 
-    <dt>How do I get there?</dt>
+<h4>Music</h4>
 
-    <dl>
-      <dt>Via GPS / <a target='_blank' href='http://goo.gl/maps/j5sk'>Google Maps</a></dt>
-      <dd>Mote Marine Laboratory &amp; Aquarium<br>
-      1600 Ken Thompson Parkway<br>
-      Sarasota, FL 34236</dd>
+<p>Roger Zare wrote <em>Viniculum Matrimonii</em> (Latin for "bond of marriage") for our wedding, and he and Alex Dee performed it at the end of our ceremony. The following is a studio recording of the piece.</p>
 
-      <dt>From Sarasota</dt>
-      <dd>Mote Marine is located over the Ringling Bridge, on City
-      Island.  It's a few minutes past St. Armand's Circle.  Click <a target='_blank'
-      href="http://mote.org/index.php?submenu=AQUARIUM&src=gendocs&ref=Aquarium%20-%20Detailed%20Directions&category=Aquarium">here</a>
-      for directions.
+<div id='music-player'>
+  <div id='music-player-title'><em>Viniculum Matrimonii</em>, by Roger Zare</div>
+  <div id='music-player-artists'>Alex Dee, violin, and Roger Zare, piano</div>
+  <div><audio src='audio/test.mp3'></audio></div>
+</div>
 
-      <p>Once you're over the bridge, just follow the brown signs.</p></dd>
+<p>Have a look at <a target='_blank' href='http://rogerzare.com'>Roger's website</a> for more of his great music.</p>
 
-      <dt>From the southeastern US</dt>
-      <dd>Sarasota is <a target='_blank' href='http://goo.gl/maps/ouxR'>located</a> one hour
-      south of Tampa on I-75.</dd>
+<h4>Programs</h4>
 
-      <dt>From elsewhere</dt>
+<p>We had two different programs at our wedding:</p>
 
-      <dd>You can fly into either Tampa International Airport (TPA) or
-      Sarasota-Bradenton International Airport (SRQ).  SRQ is closer, but TPA
-      often has better rates.</dd>
-    </dl>
+<ul id='programs'>
+<li><a>Serious program</a></li>
+<li><a>Not-so-serious program</a></li>
+</ul>
 
-    <dt>What can I do while I'm there?</dt>
-
-    <dd><p>We consider these to be the highlights of Sarasota:</p>
-
-      <ul>
-        <li><a target='_blank' href='http://www.siestakeychamber.com/beaches.php?id_cat=24'>Siesta Key Beach</a></li>
-        <li><a target='_blank' href='http://www.ringling.org/'>Ringling Museum of Art</a></li>
-        <li><a target='_blank' href='http://www.selby.org/'>Selby Botanical Gardens</a></li>
-      </ul>
-    </dd>
-
-    <dt>What if I have a question that's not answered here?</dt>
-
-    <dd><p>It's easiest to reach us over e-mail.</p>
-
-    <ul>
-      <li>Justin: <a id='justin-mailto'></a></li>
-      <li>Caroline: <a id='caroline-mailto'></a></li>
-      <li>Kathy: <a id='kathy-mailto'></a></li>
-      <li>Josie: <a id='josie-mailto'></a></li>
-    </ul>
-
-    <p>You can also contact us via our
-    <a href='?guestbook' id='guestbook-link-2'>guestbook</a>.</p>
-
-    </dd>
-  </dl>
 </div>
 
 <div id='registry-below' class='body-text'>
@@ -143,15 +102,6 @@
 and <a target='_blank' href='http://www.crateandbarrel.com/Gift-Registry/Guest/View-Registry.aspx?grid=4740101'>Crate
 &amp; Barrel</a>.</p>
 
-<p>If you would like to purchase from the "universal registry" at the bottom of
-the Amazon list, you'll need our address:
-<address>
-Justin Lebar and Caroline Schermer<br>
-527 W 113 St. #4R<br>
-New York, NY 10025
-</address>
-</p>
-
 <p>We're grateful we'll be able to celebrate our marriage with so many friends
 and family.  In place of a gift to us, we ask that you consider giving to <a
 target='_blank' href='https://www.doctorswithoutborders.org/donate/?t=t'>Doctors Without
@@ -159,59 +109,6 @@ Borders</a>, so that others might enjoy the gift of a healthy life.</p>
 
 <p>(If you're unfamiliar with Doctors Without Borders, more information is
 available <a target='_blank' href='https://www.doctorswithoutborders.org/aboutus/'>here</a>.)</p>
-
-</div>
-
-<div id='rsvp-below' class='body-text'>
-
-  <div id='rsvp-header'>
-    We look forward to celebrating with you!
-    <div id='rsvp-header2'>Please reply by July 25th, 2011.</div>
-  </div>
-
-
-  <form id='rsvp-form' action="https://spreadsheets.google.com/spreadsheet/formResponse?formkey=dHN0TGdXdmVLZFBHX3hGVU9vNmMtUXc6MQ&amp;embedded=true&amp;ifq" method="POST" id="ss-form" target='_blank'>
-
-    <table>
-      <tr>
-        <td class='form-label'><label for='entry_0'>Name(s)</label></td>
-        <td><input type="text" name="entry.0.single" value="" id="entry_0" size='30'></td>
-      </tr>
-      <tr>
-        <td class='form-label'>
-          <label for='group_2_1'>Accepts</label>
-        </td>
-        <td>
-           <input type="radio" name="entry.2.group" value="Yes" id="group_2_1">
-        </td>
-      </tr>
-      <tr>
-        <td class='form-label'>
-          <label for='group_2_2'>Regrets</label>
-        </td>
-        <td>
-          <input type="radio" name="entry.2.group" value="No" id="group_2_2">
-        </td>
-      <tr>
-        <td class='form-label'>
-          <label for='entry_3'>Notes</label>
-        </td>
-        <td>
-          <textarea name="entry.3.single" rows="3" cols="29" class="ss-q-long" id="entry_3"></textarea>
-        </td>
-      </tr>
-      <tr>
-        <td class='form-label'>&nbsp;</td>
-        <td>
-          <input type="submit" name="submit" value="Submit" class='form-submit-button'>
-        </td>
-      </tr>
-    </table>
-
-    <input type="hidden" name="pageNumber" value="0">
-    <input type="hidden" name="backupCache" value="">
-  
-  </form>
 
 </div>
 

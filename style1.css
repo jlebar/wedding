@@ -161,45 +161,32 @@ address {
   margin-left: 1em;
 }
 
-form td {
-  padding-bottom: .5em;
-}
-
-form td.form-label {
-  padding-right: .75em;
-  text-align: right;
-  vertical-align: middle;
-}
-
-input.form-submit-button {
-  margin-top: .75em;
-}
-
-#rsvp-form table {
-  float: right;
-}
-
-form input, form select, form textarea {
-  font-family: 'BonvenoCFLight';
-  font-size: 13pt;
-}
-
-#rsvp-header {
-  text-align: right;
-  margin-bottom: 1.5em;
-}
-
-#rsvp-header2 {
-  color: #666;
-  font-size: .85em;
-}
-
 div#guestbook-below {
   /* Seriously, this is awful.  See nav.js. */
   position: absolute;
   top: -4000px;
   left: -4000px;
   max-width: 1000px;
+}
+
+div#music-player {
+  padding-left: 1em;
+}
+
+div#music-player-title {
+  font-size: 90%;
+}
+
+div#music-player-artists {
+  font-size: 80%;
+}
+
+ul#programs {
+  list-style-type: none;
+}
+
+ul#programs li {
+  padding-bottom: .25em;
 }
 
 #dsq-content {

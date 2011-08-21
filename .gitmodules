@@ -1,0 +1,3 @@
+[submodule "mediaelement-src"]
+	path = mediaelement-src
+	url = http://github.com/johndyer/mediaelement/
